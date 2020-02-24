@@ -1,0 +1,67 @@
+<!Doctype HTML>
+<html>
+<head>
+<title>Level 0 Boss Challenge</title>
+<meta charset="UTF-8">
+  <meta name="description" content="Level 0">
+  <meta name="keywords" content="Level 0, Game Prototyping, New England Institute of Technology">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <p id="demo1"><input type="text" id="number1" value=" "></p>
+  <p id="demo2"><input type="text" id="number2" value=" "></p>
+
+<button onclick="addNumbers()">Add</button>
+
+
+ <script type="text/javascript">
+var a = "string";
+var b = 2;
+var c = false;
+var myArray = new Array();
+
+console.log("a: " + typeof(a));
+console.log("b: " + typeof(b));
+console.log("c: " + typeof(c));
+
+for(var i = 0; i < 100; i++)
+{
+	var number = i+1
+	var myObject = {index: number, label: findfizz(number)};
+	myArray.push(myObject);
+}
+
+
+for(var i = 0; i < myArray.length; i++)
+{
+	for(value in myArray[i]){
+		console.log(myArray[i][value]);
+		}
+		
+	/*if(myArray[i].label == "fizz"){
+		console.log(myArray[i]);} */	
+}
+
+function findfizz(i){
+	if (i%2==0 && i%3==0){return ("fizz buzz");}
+	else if (i%2==0){return ("fizz");}
+	else if (i%3==0){return ("buzz");}
+	else {return null;}
+
+}
+function addNumbers(){
+	var num1 = document.getElementById("number1").value;
+	var num2 = document.getElementById("number2").value;
+	num1 = Number(num1)
+	num2 = Number(num2)
+	var answer = (num1 + num2);
+	alert(answer);
+	console.log(num1 + " + " + num2 + " = " + answer);
+}
+
+</script>
+</head>
+<body>
+<p><Ethan Markham></p>
+
+</body>
+</html>
